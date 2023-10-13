@@ -14,4 +14,5 @@ The model_tester.py file can be used to load saved networks and use them for cla
 (Network must be same type as Inception V3, or the code has to be tweaked to match the new network's structure)
 
 Link for dataset: https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset
+
 Link for PyTorch tutorial: https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html
