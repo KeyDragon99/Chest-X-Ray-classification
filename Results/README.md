@@ -6,4 +6,4 @@ and the third is fine tuning on just the last layer of the network (mentioned as
 
 In the last case the network has also preloaded ImageNet weights, but the training is being done on just the layer that was changed (the output layer turned from 1024 to 3).
 
-![Graph](https://github.com/KeyDragon99/Chest-X-Ray-classification/assets/142112884/a6fd33ac-d93d-4430-b92e-6738df75ba07)
+![Capture](https://github.com/KeyDragon99/Chest-X-Ray-classification/assets/142112884/1e37e9f8-db65-4c1f-aef1-4eb8b636d05e)
