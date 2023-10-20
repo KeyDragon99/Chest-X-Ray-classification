@@ -22,6 +22,9 @@ batch_size = 32
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 def initialize_model(model_name, model_path):
+    """
+    Initialize the model by loading the saved model file into it
+    """
     # Initialize these variables which will be set in this if statement. Each of these
     #   variables is model specific.
     model_ft = None
@@ -71,6 +74,10 @@ dataloaders_dict = {
     ['val']}
 
 def test_model(model, dataloaders, criterion):
+    """
+    Evaluate the model by passing desired images into its input.
+    This can also be used for actual image classification preditions, since the network model is pretrained.
+    """
     since = time.time()
 
     # Each epoch has a training and validation phase
