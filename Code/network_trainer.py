@@ -39,6 +39,10 @@ feature_extract = False
 
 ##############################################################################################
 def train_model(model, dataloaders, criterion, optimizer, num_epochs=25, is_inception=True):
+    """
+    Trains and validates the model, depending on the state of the variable 'phase'. It keeps
+    the state of the model with the highest validation score.
+    """
     since = time.time()
 
     val_acc_history = []
@@ -121,6 +125,9 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs=25, is_ince
 
 ##############################################################################################
 def set_parameter_requires_grad(model, feature_extracting):
+    """
+    Set requires_grad to True or False in the model's parameters
+    """
     if feature_extracting:
         for param in model.parameters():
             param.requires_grad = False
@@ -128,6 +135,9 @@ def set_parameter_requires_grad(model, feature_extracting):
 
 ##############################################################################################
 def initialize_model(model_name, num_classes, feature_extract, use_pretrained=True):
+    """
+    Initializes the neural network model, setting up the structure and the type
+    """
     # Initialize these variables which will be set in this if statement. Each of these
     #   variables is model specific.
     model_ft = None
@@ -179,8 +189,10 @@ data_transforms = {
 }
 
 ##############################################################################################
-# Writing and saving the history of each training session
 def databackup(hist, model_ft):
+    """
+    Writing and saving the history of each training session
+    """
     # Save in one file the data and some of the model's properties-hyperparameters
     file = open('history.txt', 'a')
     # Save in one file the raw data
